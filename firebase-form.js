@@ -28,6 +28,7 @@ contactForm.addEventListener('submit', async (e) => {
   const name      = document.getElementById('name').value.trim();
   const studentId = document.getElementById('studentId').value.trim();
   const dept      = document.getElementById('dept').value.trim();
+  const phone     = document.getElementById('phone').value.trim();
   const interest  = document.getElementById('interest').value;
   const message   = document.getElementById('message').value.trim();
 
@@ -51,6 +52,7 @@ contactForm.addEventListener('submit', async (e) => {
       name,
       studentId,
       dept,
+      phone,
       interest,
       message,
       submittedAt: serverTimestamp()
