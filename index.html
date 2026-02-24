@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CAN - 컴퓨터소프트웨어공학 전공동아리</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ===== NAVIGATION ===== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-bracket">&lt;</span>CAN<span class="logo-bracket">/&gt;</span>
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">소개</a></li>
+        <li><a href="#activities">활동</a></li>
+        <li><a href="#members">멤버</a></li>
+        <li><a href="#gallery">갤러리</a></li>
+        <li><a href="#notice">공지사항</a></li>
+        <li><a href="#recruit" class="nav-cta">모집중</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="메뉴">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero">
+    <canvas id="bgCanvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-tag">Computer Science Club</div>
+      <h1 class="hero-title">
+        <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+      </h1>
+      <p class="hero-sub">코딩을 넘어, 함께 성장하는 공간<br>우리는 <strong>CAN</strong> 합니다.</p>
+      <div class="hero-buttons">
+        <a href="#about" class="btn btn-primary">동아리 알아보기</a>
+        <a href="#recruit" class="btn btn-outline">신입 모집</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num" data-target="80">0</span><span>+</span><p>현재 회원</p></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num" data-target="12">0</span><span>기</span><p>창립 연도 이후</p></div>
+        <div class="stat-div"></div>
+        <div class="stat"><span class="stat-num" data-target="30">0</span><span>+</span><p>진행 프로젝트</p></div>
+      </div>
+    </div>
+    <div class="scroll-down">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">About Us</span>
+        <h2>CAN이란?</h2>
+        <p>Computer Algorithm Network — 알고리즘과 개발, 그리고 네트워크로 함께 성장합니다.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text">
+          <h3>우리의 이야기</h3>
+          <p>CAN은 1988년 학부 최초로 컴퓨터공학과 학생들이 모여 설립한 학술 동아리입니다. 이론 공부에 그치지 않고 실제 프로젝트와 알고리즘 스터디를 통해 실력을 키워나갑니다.</p>
+          <p>매주 정기 세미나, 해커톤, 프로젝트 팀 활동 등 다양한 프로그램을 운영하며 선후배 간의 멘토링 문화를 이어가고 있습니다.</p>
+          <div class="about-values">
+            <div class="value-item">
+              <div class="value-icon">💡</div>
+              <div>
+                <h4>학습</h4>
+                <p>알고리즘, 웹/앱 개발, AI 등 다양한 분야를 함께 공부합니다.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🤝</div>
+              <div>
+                <h4>협업</h4>
+                <p>팀 프로젝트를 통해 협업 능력과 실무 경험을 쌓습니다.</p>
+              </div>
+            </div>
+            <div class="value-item">
+              <div class="value-icon">🚀</div>
+              <div>
+                <h4>성장</h4>
+                <p>멘토링과 코드 리뷰 문화로 서로를 성장시킵니다.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap">
+          <div class="about-card">
+            <div class="card-header">
+              <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+              <span class="card-title">can.py</span>
+            </div>
+            <pre class="code-block"><code><span class="kw">class</span> <span class="fn">CAN</span>:
+    name = <span class="str">"Computer Algorithm Network"</span>
+    founded = <span class="num">1988</span>
+    members = <span class="num">80</span>
+
+    <span class="kw">def</span> <span class="fn">mission</span>(self):
+        <span class="kw">return</span> <span class="str">"함께 성장하는 개발자"</span>
+
+    <span class="kw">def</span> <span class="fn">values</span>(self):
+        <span class="kw">return</span> [
+            <span class="str">"학습"</span>,
+            <span class="str">"협업"</span>,
+            <span class="str">"성장"</span>,
+        ]
+
+can = <span class="fn">CAN</span>()
+<span class="fn">print</span>(can.mission())</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVITIES ===== -->
+  <section id="activities" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Activities</span>
+        <h2>주요 활동</h2>
+        <p>CAN에서는 다양한 활동을 통해 실력과 경험을 쌓을 수 있습니다.</p>
+      </div>
+      <div class="activities-grid">
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">⚡</div>
+          <h3>알고리즘 스터디</h3>
+          <p>매주 BOJ, LeetCode 문제를 함께 풀며 코딩테스트 대비와 알고리즘 실력을 향상시킵니다.</p>
+          <ul class="activity-tags">
+            <li>주 1회</li><li>온오프라인 병행</li><li>레벨별 그룹</li>
+          </ul>
+        </div>
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">🛠️</div>
+          <h3>프로젝트 팀</h3>
+          <p>웹, 앱, AI, 게임 등 다양한 분야의 팀 프로젝트를 학기 중 진행하고 성과를 공유합니다.</p>
+          <ul class="activity-tags">
+            <li>학기별</li><li>팀 빌딩</li><li>발표회</li>
+          </ul>
+        </div>
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">📰</div>
+          <h3>CAN 소식</h3>
+          <p>동아리 활동 결과, 부원 근황, 프로젝트 성과 등 CAN의 다양한 소식을 뉴스레터와 SNS로 전합니다.</p>
+          <ul class="activity-tags">
+            <li>정기 발행</li><li>SNS 연동</li><li>아카이브</li>
+          </ul>
+        </div>
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">📚</div>
+          <h3>세미나 & 특강</h3>
+          <p>선배 개발자 초청 특강, 기술 트렌드 세미나, 취업 준비 세션 등 다양한 교육 프로그램을 운영합니다.</p>
+          <ul class="activity-tags">
+            <li>월 1회</li><li>외부 연사</li><li>Q&amp;A</li>
+          </ul>
+        </div>
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">🏆</div>
+          <h3>대회 참가</h3>
+          <p>각종 프로그래밍 대회, 공모전, 스타트업 경진대회 등에 팀으로 참가하여 실전 경험을 쌓습니다.</p>
+          <ul class="activity-tags">
+            <li>ICPC</li><li>공모전</li><li>경진대회</li>
+          </ul>
+        </div>
+        <div class="activity-card" data-aos>
+          <div class="activity-icon">🎉</div>
+          <h3>MT & 네트워킹</h3>
+          <p>학기 초 MT, 종강 파티, OB/YB 네트워킹 행사 등을 통해 끈끈한 동아리 문화를 만들어갑니다.</p>
+          <ul class="activity-tags">
+            <li>학기별</li><li>MT</li><li>송년회</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== MEMBERS ===== -->
+  <section id="members" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Members</span>
+        <h2>임원진 소개</h2>
+        <p>CAN을 이끌어가는 2026년도 임원진을 소개합니다.</p>
+      </div>
+      <div class="members-grid">
+        <div class="member-card executive">
+          <div class="member-avatar">
+            <div class="avatar-photo">
+              <img src="Minseo.jpg" alt="김민서" />
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>김민서</h3>
+            <span class="member-role president">회장</span>
+            <p>컴퓨터소프트웨어공학과 3학년</p>
+            <div class="member-skills">
+              <span>Unreal Engine 5</span><span>C</span><span>C++</span><span>JAVA</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="avatar-photo">
+              <img src="Jinwoo.jpg" alt="김진우" />
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>김진우</h3>
+            <span class="member-role vp">부회장</span>
+            <p>컴퓨터소프트웨어공학과 3학년</p>
+            <div class="member-skills">
+              <span>Linux</span><span>Network</span><span>Security Monitoring/SOC</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="avatar-placeholder">📋</div>
+          </div>
+          <div class="member-info">
+            <h3>김동혁</h3>
+            <span class="member-role">총무</span>
+            <p>컴퓨터소프트웨어공학과 3학년</p>
+            <div class="member-skills">
+              <span>Node.js</span><span>Python</span><span>Backend</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="avatar-photo">
+              <img src="Dayeon.jpg" alt="김다연" />
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>김다연</h3>
+            <span class="member-role">홍보부장</span>
+            <p>컴퓨터소프트웨어공학과 2학년</p>
+            <div class="member-skills">
+              <span>Figma</span><span>HTML/CSS</span><span>JS</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="avatar-photo">
+              <img src="Jino.jpg" alt="정진오" />
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>정진오</h3>
+            <span class="member-role">학술부장</span>
+            <p>컴퓨터소프트웨어공학과 3학년</p>
+            <div class="member-skills">
+              <span>C++</span><span>알고리즘</span><span>PS</span>
+            </div>
+          </div>
+        </div>
+        <div class="member-card">
+          <div class="member-avatar">
+            <div class="avatar-photo">
+              <img src="Jino.jpg" alt="정진오" />
+            </div>
+          </div>
+          <div class="member-info">
+            <h3>정진오</h3>
+            <span class="member-role">개발부장</span>
+            <p>컴퓨터소프트웨어공학과 3학년</p>
+            <div class="member-skills">
+              <span>Flutter</span><span>Firebase</span><span>Swift</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== GALLERY ===== -->
+  <section id="gallery" class="section section-dark">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Gallery</span>
+        <h2>활동 갤러리</h2>
+        <p>CAN의 다양한 활동 모습을 담았습니다.</p>
+      </div>
+      <div class="gallery-filter">
+        <button class="filter-btn active" data-filter="all">전체</button>
+        <button class="filter-btn" data-filter="news">CAN소식</button>
+        <button class="filter-btn" data-filter="study">스터디</button>
+        <button class="filter-btn" data-filter="event">행사</button>
+        <button class="filter-btn" data-filter="project">프로젝트</button>
+      </div>
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item" data-category="news">
+          <div class="gallery-img news-1">
+            <div class="gallery-overlay">
+              <h4>CAN 뉴스레터 창간호</h4>
+              <p>CAN소식 · 2024.11</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item large" data-category="event">
+          <div class="gallery-img event-1">
+            <div class="gallery-overlay">
+              <h4>2024 신입생 OT</h4>
+              <p>행사 · 2024.03</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="study">
+          <div class="gallery-img study-1">
+            <div class="gallery-overlay">
+              <h4>알고리즘 스터디</h4>
+              <p>스터디 · 2024.09</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="project">
+          <div class="gallery-img project-1">
+            <div class="gallery-overlay">
+              <h4>프로젝트 발표회</h4>
+              <p>프로젝트 · 2024.12</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item tall" data-category="event">
+          <div class="gallery-img event-2">
+            <div class="gallery-overlay">
+              <h4>2024 MT</h4>
+              <p>행사 · 2024.05</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="news">
+          <div class="gallery-img news-2">
+            <div class="gallery-overlay">
+              <h4>2024 하반기 CAN 활동 소식</h4>
+              <p>CAN소식 · 2024.08</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="study">
+          <div class="gallery-img study-2">
+            <div class="gallery-overlay">
+              <h4>웹개발 세미나</h4>
+              <p>스터디 · 2024.10</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item" data-category="project">
+          <div class="gallery-img project-2">
+            <div class="gallery-overlay">
+              <h4>AI 프로젝트 팀</h4>
+              <p>프로젝트 · 2024.11</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== NOTICE ===== -->
+  <section id="notice" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Notice</span>
+        <h2>공지사항</h2>
+        <p>CAN의 최신 소식과 공지를 확인하세요.</p>
+      </div>
+      <div class="notice-wrap">
+        <div class="notice-list">
+          <div class="notice-item pinned">
+            <div class="notice-badge pin">📌 중요</div>
+            <div class="notice-content">
+              <h4>2025년 1학기 신입 부원 모집 공고</h4>
+              <p>CAN의 새로운 가족을 모집합니다! 지원 기간 및 방법을 확인해주세요.</p>
+              <span class="notice-date">2025.02.20</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+          <div class="notice-item">
+            <div class="notice-badge">📣 공지</div>
+            <div class="notice-content">
+              <h4>2025년 정기총회 안내</h4>
+              <p>3월 첫째 주 화요일 정기총회가 개최됩니다. 전원 참석 바랍니다.</p>
+              <span class="notice-date">2025.02.15</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+          <div class="notice-item">
+            <div class="notice-badge event">🎉 행사</div>
+            <div class="notice-content">
+              <h4>2025 신입생 OT 일정 공지</h4>
+              <p>신입생 오리엔테이션 일정이 확정되었습니다. 장소: 공대 세미나실 101호</p>
+              <span class="notice-date">2025.02.10</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+          <div class="notice-item">
+            <div class="notice-badge">📚 학술</div>
+            <div class="notice-content">
+              <h4>1학기 알고리즘 스터디 팀 모집</h4>
+              <p>레벨별 알고리즘 스터디 팀을 모집합니다. 초급/중급/고급 반으로 운영됩니다.</p>
+              <span class="notice-date">2025.02.08</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+          <div class="notice-item">
+            <div class="notice-badge">📰 소식</div>
+            <div class="notice-content">
+              <h4>CAN 뉴스레터 2024 하반기호 발행</h4>
+              <p>2024 하반기 동아리 활동 성과와 부원 인터뷰를 담은 뉴스레터가 발행됐습니다.</p>
+              <span class="notice-date">2024.12.20</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+          <div class="notice-item">
+            <div class="notice-badge">📝 학술</div>
+            <div class="notice-content">
+              <h4>2024 하반기 프로젝트 발표회 결과</h4>
+              <p>총 8개 팀이 발표를 진행했으며 결과 및 시상 내역을 공유합니다.</p>
+              <span class="notice-date">2024.12.15</span>
+            </div>
+            <span class="notice-arrow">→</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== RECRUIT ===== -->
+  <section id="recruit" class="section section-accent">
+    <div class="container">
+      <div class="recruit-wrap">
+        <div class="recruit-text">
+          <span class="section-tag light">Recruitment</span>
+          <h2>CAN과 함께하세요!</h2>
+          <p>2025년 1학기 신입 부원을 모집합니다.<br>코딩에 열정이 있다면 누구든 환영합니다! <br>면접 일정은 3월 18일 (화)에 예정되어 있으며 변동시 별도 연락드립니다.</p>
+          <ul class="recruit-list">
+            <li>
+              <span class="recruit-icon">📅</span>
+              <div>
+                <strong>모집 기간</strong>
+                <p>2025년 2월 5일(목) ~ 3월 17일(화)</p>
+              </div>
+            </li>
+            <li>
+              <span class="recruit-icon">👤</span>
+              <div>
+                <strong>지원 자격</strong>
+                <p>컴퓨터소프트웨어공학과 재학생 (1학년 ~ 2학년)</p>
+              </div>
+            </li>
+            <li>
+              <span class="recruit-icon">📝</span>
+              <div>
+                <strong>전형 절차</strong>
+                <p>서류 접수 → 면접 (3월 18일 예정) → 최종 발표</p>
+              </div>
+            </li>
+            <li>
+              <span class="recruit-icon">💰</span>
+              <div>
+                <strong>회비</strong>
+                <p>학기당 15,000원 (동아리 운영 비용)</p>
+                <p>모임통장으로 투명하게 관리됩니다.</p>
+              </div>
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-white">지원서 작성하기</a>
+        </div>
+        <div class="recruit-form-wrap">
+          <div class="recruit-form">
+            <h3>CAN과 함께하기</h3>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="name">이름</label>
+                <input type="text" id="name" name="name" placeholder="홍길동" required />
+              </div>
+              <div class="form-group">
+                <label for="studentId">학번</label>
+                <input type="text" id="studentId" name="studentId" placeholder="20250001" required />
+              </div>
+              <div class="form-group">
+                <label for="dept">학과</label>
+                <input type="text" id="dept" name="dept" placeholder="컴퓨터소프트웨어공학과" required />
+              </div>
+              <div class="form-group">
+                <label for="interest">관심 분야</label>
+                <select id="interest" name="interest" required>
+                  <option value="" disabled selected>관심 분야를 선택하세요</option>
+                  <option value="web">웹</option>
+                  <option value="game">게임</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">지원 동기 및 문의사항(간략히)</label>
+                <textarea id="message" name="message" rows="3" placeholder="CAN에 지원하게 된 동기나 궁금한점을 적어주세요." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-full">지원하기</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT / FOOTER ===== -->
+  <section id="contact" class="section section-dark footer-section">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <span class="logo-bracket">&lt;</span>CAN<span class="logo-bracket">/&gt;</span>
+          </div>
+          <p>컴퓨터전공동아리 CAN<br>Computer Algorithm Network</p>
+          <div class="social-links">
+            <a href="#" class="social-btn" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0 1 12 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Instagram">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="#" class="social-btn" title="Discord">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028c.462-.63.874-1.295 1.226-1.994a.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div class="footer-links">
+          <h4>바로가기</h4>
+          <ul>
+            <li><a href="#about">동아리 소개</a></li>
+            <li><a href="#activities">주요 활동</a></li>
+            <li><a href="#members">임원진</a></li>
+            <li><a href="#gallery">갤러리</a></li>
+            <li><a href="#notice">공지사항</a></li>
+            <li><a href="#recruit">신입 모집</a></li>
+          </ul>
+        </div>
+        <div class="footer-contact-info">
+          <h4>연락처</h4>
+          <ul>
+            <li>
+              <span class="contact-icon">📧</span>
+              <span>can@university.ac.kr</span>
+            </li>
+            <li>
+              <span class="contact-icon">📍</span>
+              <span>공과대학관 404호</span>
+            </li>
+            <li>
+              <span class="contact-icon">⏰</span>
+              <span>정기모임: 매주 수요일 18:00</span>
+            </li>
+            <li>
+              <span class="contact-icon">💬</span>
+              <span>카카오톡: @CAN동아리</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 CAN - Computer Algorithm Network. All rights reserved.</p>
+        <p class="footer-made">Made with ❤️ by CAN 개발팀</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Toast Notification -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
