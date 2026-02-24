@@ -5,6 +5,8 @@
 
 /* ── RESET & BASE ── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+*                      { scrollbar-width: none; -ms-overflow-style: none; }
+*::-webkit-scrollbar   { display: none; }
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -568,15 +570,15 @@ img {
 .gallery-overlay h4 { font-size: 1rem; font-weight: 700; color: #fff; }
 .gallery-overlay p { font-size: 0.82rem; color: rgba(255,255,255,0.7); }
 
-/* Gallery image placeholders with gradients */
-.news-1 { background: linear-gradient(135deg, #1a1050 0%, #2d1b69 50%, #6c63ff 100%); }
-.news-2 { background: linear-gradient(135deg, #0d3b5e 0%, #1a6e9f 50%, #00d4ff 100%); }
-.event-1 { background: linear-gradient(135deg, #1a2f1a 0%, #2d5a27 50%, #4caf50 100%); }
-.event-2 { background: linear-gradient(135deg, #3a1a1a 0%, #6b2d2d 50%, #e74c3c 100%); }
-.study-1 { background: linear-gradient(135deg, #1a1a3a 0%, #2d2d6b 50%, #3f51b5 100%); }
-.study-2 { background: linear-gradient(135deg, #1a3a3a 0%, #1a6b6b 50%, #00bcd4 100%); }
-.project-1 { background: linear-gradient(135deg, #3a2a10 0%, #6b4f1a 50%, #ff9800 100%); }
-.project-2 { background: linear-gradient(135deg, #2a1a3a 0%, #5a2d6b 50%, #9c27b0 100%); }
+/* Gallery images */
+.news-1   { background: url('int.jpg')   center/cover no-repeat; }
+.news-2   { background: url('sn2.jpg')   center/cover no-repeat; }
+.event-1  { background: linear-gradient(135deg, #1a2f1a 0%, #2d5a27 50%, #4caf50 100%); }
+.event-2  { background: url('mt1.jpg')   center/cover no-repeat; }
+.study-1  { background: url('sul1.jpg')  center/cover no-repeat; }
+.study-2  { background: url('sn1.jpg')   center/cover no-repeat; }
+.project-1{ background: url('sang1.jpg') center/cover no-repeat; }
+.project-2{ background: url('sang2.jpg') center/cover no-repeat; }
 
 /* Add decorative icons to gallery placeholders */
 .hackathon-1::after, .hackathon-2::after, .event-1::after, .event-2::after,
@@ -788,6 +790,41 @@ img {
   pointer-events: none;
 }
 .toast.show { transform: translateY(0); opacity: 1; }
+
+/* =======================================
+   LUCIDE ICONS
+======================================= */
+/* 활동 카드 아이콘 */
+.activity-icon svg {
+  width: 40px; height: 40px;
+  stroke: var(--primary); stroke-width: 1.5; fill: none;
+}
+/* About 가치 아이콘 */
+.value-icon svg {
+  width: 26px; height: 26px;
+  stroke: var(--primary); stroke-width: 1.5; fill: none;
+}
+/* 공지사항 배지 아이콘 */
+.notice-badge svg {
+  width: 12px; height: 12px;
+  vertical-align: -1px; stroke-width: 2; fill: none;
+  stroke: currentColor;
+}
+/* 모집 리스트 아이콘 */
+.recruit-icon svg {
+  width: 22px; height: 22px;
+  stroke: var(--primary); stroke-width: 1.5; fill: none;
+}
+/* 푸터 연락처 아이콘 */
+.contact-icon svg {
+  width: 16px; height: 16px;
+  stroke: var(--primary-light); stroke-width: 1.5; fill: none;
+  vertical-align: -2px;
+}
+/* 480px: 활동 카드 아이콘 축소 */
+@media (max-width: 480px) {
+  .activity-icon svg { width: 28px; height: 28px; }
+}
 
 /* =======================================
    RESPONSIVE

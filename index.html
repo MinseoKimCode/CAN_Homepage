@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 </head>
 <body>
 
@@ -23,7 +24,7 @@
         <li><a href="#members">멤버</a></li>
         <li><a href="#gallery">갤러리</a></li>
         <li><a href="#notice">공지사항</a></li>
-        <li><a href="#recruit" class="nav-cta">모집중</a></li>
+        <li><a href="#recruit" class="nav-cta">지원하기</a></li>
       </ul>
       <button class="hamburger" id="hamburger" aria-label="메뉴">
         <span></span><span></span><span></span>
@@ -42,7 +43,7 @@
       <p class="hero-sub">코딩을 넘어, 함께 성장하는 공간<br>우리는 <strong>CAN</strong> 합니다.</p>
       <div class="hero-buttons">
         <a href="#about" class="btn btn-primary">동아리 알아보기</a>
-        <a href="#recruit" class="btn btn-outline">신입 모집</a>
+        <a href="#recruit" class="btn btn-outline">지원하기</a>
       </div>
       <div class="hero-stats">
         <div class="stat"><span class="stat-num" data-target="54">0</span><span>+</span><p>현재 회원</p></div>
@@ -74,21 +75,21 @@
           <p>매주 정기 세미나, 해커톤, 프로젝트 팀 활동 등 다양한 프로그램을 운영하며 선후배 간의 멘토링 문화를 이어가고 있습니다.</p>
           <div class="about-values">
             <div class="value-item">
-              <div class="value-icon">💡</div>
+              <div class="value-icon"><i data-lucide="lightbulb"></i></div>
               <div>
                 <h4>학습</h4>
                 <p>알고리즘, 웹/앱 개발, AI 등 다양한 분야를 함께 공부합니다.</p>
               </div>
             </div>
             <div class="value-item">
-              <div class="value-icon">🤝</div>
+              <div class="value-icon"><i data-lucide="users"></i></div>
               <div>
                 <h4>협업</h4>
                 <p>팀 프로젝트를 통해 협업 능력과 실무 경험을 쌓습니다.</p>
               </div>
             </div>
             <div class="value-item">
-              <div class="value-icon">🚀</div>
+              <div class="value-icon"><i data-lucide="trending-up"></i></div>
               <div>
                 <h4>성장</h4>
                 <p>멘토링과 코드 리뷰 문화로 서로를 성장시킵니다.</p>
@@ -108,17 +109,17 @@
 
 <span class="kw">struct</span> <span class="fn">CAN</span> {
   std::string name    = <span class="str">"CAN"</span>;
-  <span class="kw">int</span>         founded = <span class="num">1988</span>;
-  <span class="kw">int</span>         members = <span class="num">80</span>;
+  <span class="kw">int</span> founded = <span class="num">1988</span>;
+  <span class="kw">int</span> members = <span class="num">80</span>;
 
   <span class="kw">auto</span> <span class="fn">mission</span>() <span class="kw">const</span>
       -> std::string {
-    <span class="kw">return</span> <span class="str">"함께 성장하는 개발자"</span>;
+    <span class="kw">return</span> <span class="str">"CAN에서 같이 성장할 사람~~~~????"</span>;
   }
 
   <span class="kw">auto</span> <span class="fn">values</span>() <span class="kw">const</span>
       -> std::vector&lt;std::string&gt; {
-    <span class="kw">return</span> {<span class="str">"학습"</span>, <span class="str">"협업"</span>, <span class="str">"성장"</span>};
+    <span class="kw">return</span> {<span class="str">"빨리"</span>, <span class="str">"지원하기"</span>, <span class="str">"누르자"</span>};
   }
 };
 
@@ -145,15 +146,15 @@
       </div>
       <div class="activities-grid">
         <div class="activity-card" data-aos>
-          <div class="activity-icon">⚡</div>
+          <div class="activity-icon"><i data-lucide="zap"></i></div>
           <h3>알고리즘 스터디</h3>
-          <p>매주 BOJ, LeetCode 문제를 함께 풀며 코딩테스트 대비와 알고리즘 실력을 향상시킵니다.</p>
+          <p>매주 선배들과 함께 문제를 함께 풀며 코딩테스트 대비와 알고리즘 실력을 향상시킵니다.</p>
           <ul class="activity-tags">
             <li>주 1회</li><li>온오프라인 병행</li><li>레벨별 그룹</li>
           </ul>
         </div>
         <div class="activity-card" data-aos>
-          <div class="activity-icon">🛠️</div>
+          <div class="activity-icon"><i data-lucide="code-2"></i></div>
           <h3>프로젝트 팀</h3>
           <p>웹, 앱, AI, 게임 등 다양한 분야의 팀 프로젝트를 학기 중 진행하고 성과를 공유합니다.</p>
           <ul class="activity-tags">
@@ -161,7 +162,7 @@
           </ul>
         </div>
         <div class="activity-card" data-aos>
-          <div class="activity-icon">📰</div>
+          <div class="activity-icon"><i data-lucide="rss"></i></div>
           <h3>CAN 소식</h3>
           <p>동아리 활동 결과, 부원 근황, 프로젝트 성과 등 CAN의 다양한 소식을 뉴스레터와 SNS로 전합니다.</p>
           <ul class="activity-tags">
@@ -169,7 +170,7 @@
           </ul>
         </div>
         <div class="activity-card" data-aos>
-          <div class="activity-icon">📚</div>
+          <div class="activity-icon"><i data-lucide="book-open"></i></div>
           <h3>세미나 & 특강</h3>
           <p>선배 개발자 초청 특강, 기술 트렌드 세미나, 취업 준비 세션 등 다양한 교육 프로그램을 운영합니다.</p>
           <ul class="activity-tags">
@@ -177,7 +178,7 @@
           </ul>
         </div>
         <div class="activity-card" data-aos>
-          <div class="activity-icon">🏆</div>
+          <div class="activity-icon"><i data-lucide="trophy"></i></div>
           <h3>대회 참가</h3>
           <p>각종 프로그래밍 대회, 공모전, 스타트업 경진대회 등에 팀으로 참가하여 실전 경험을 쌓습니다.</p>
           <ul class="activity-tags">
@@ -185,7 +186,7 @@
           </ul>
         </div>
         <div class="activity-card" data-aos>
-          <div class="activity-icon">🎉</div>
+          <div class="activity-icon"><i data-lucide="coffee"></i></div>
           <h3>MT & 네트워킹</h3>
           <p>학기 초 MT, 종강 파티, OB/YB 네트워킹 행사 등을 통해 끈끈한 동아리 문화를 만들어갑니다.</p>
           <ul class="activity-tags">
@@ -216,7 +217,7 @@
             <span class="member-role president">회장</span>
             <p>컴퓨터소프트웨어공학과 3학년</p>
             <div class="member-skills">
-              <span>Unreal Engine 5</span><span>C</span><span>C++</span><span>JAVA</span>
+              <span>C</span><span>C++</span><span>JAVA</span><span>HTML/CSS</span><span>Unreal Engine 5</span>
             </div>
           </div>
         </div>
@@ -274,7 +275,9 @@
             <span class="member-role">학술부장</span>
             <p>컴퓨터소프트웨어공학과 3학년</p>
             <div class="member-skills">
-              <span>C++</span><span>알고리즘</span><span>PS</span>
+              <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Kotlin</span><span>C</span>
+              <span>C++</span><span>C#</span><span>lua</span><span>HTML/CSS</span><span>React</span><span>Unity</span>
+              <span>Django</span><span>Spring</span><span>Node.js</span>
             </div>
           </div>
         </div>
@@ -289,7 +292,9 @@
             <span class="member-role">개발부장</span>
             <p>컴퓨터소프트웨어공학과 3학년</p>
             <div class="member-skills">
-              <span>Flutter</span><span>Firebase</span><span>Swift</span>
+              <span>Python</span><span>TypeScript</span><span>JavaScript</span><span>Kotlin</span><span>C</span>
+              <span>C++</span><span>C#</span><span>lua</span><span>HTML/CSS</span><span>React</span><span>Unity</span>
+              <span>Django</span><span>Spring</span><span>Node.js</span>
             </div>
           </div>
         </div>
@@ -392,7 +397,7 @@
       <div class="notice-wrap">
         <div class="notice-list">
           <div class="notice-item pinned">
-            <div class="notice-badge pin">📌 중요</div>
+            <div class="notice-badge pin"><i data-lucide="pin"></i> 중요</div>
             <div class="notice-content">
               <h4>2025년 1학기 신입 부원 모집 공고</h4>
               <p>CAN의 새로운 가족을 모집합니다! 지원 기간 및 방법을 확인해주세요.</p>
@@ -401,7 +406,7 @@
             <span class="notice-arrow">→</span>
           </div>
           <div class="notice-item">
-            <div class="notice-badge">📣 공지</div>
+            <div class="notice-badge"><i data-lucide="megaphone"></i> 공지</div>
             <div class="notice-content">
               <h4>2025년 정기총회 안내</h4>
               <p>3월 첫째 주 화요일 정기총회가 개최됩니다. 전원 참석 바랍니다.</p>
@@ -410,7 +415,7 @@
             <span class="notice-arrow">→</span>
           </div>
           <div class="notice-item">
-            <div class="notice-badge event">🎉 행사</div>
+            <div class="notice-badge event"><i data-lucide="calendar-check"></i> 행사</div>
             <div class="notice-content">
               <h4>2025 신입생 OT 일정 공지</h4>
               <p>신입생 오리엔테이션 일정이 확정되었습니다. 장소: 공대 세미나실 101호</p>
@@ -419,7 +424,7 @@
             <span class="notice-arrow">→</span>
           </div>
           <div class="notice-item">
-            <div class="notice-badge">📚 학술</div>
+            <div class="notice-badge"><i data-lucide="book-open"></i> 학술</div>
             <div class="notice-content">
               <h4>1학기 알고리즘 스터디 팀 모집</h4>
               <p>레벨별 알고리즘 스터디 팀을 모집합니다. 초급/중급/고급 반으로 운영됩니다.</p>
@@ -428,7 +433,7 @@
             <span class="notice-arrow">→</span>
           </div>
           <div class="notice-item">
-            <div class="notice-badge">📰 소식</div>
+            <div class="notice-badge"><i data-lucide="rss"></i> 소식</div>
             <div class="notice-content">
               <h4>CAN 뉴스레터 2024 하반기호 발행</h4>
               <p>2024 하반기 동아리 활동 성과와 부원 인터뷰를 담은 뉴스레터가 발행됐습니다.</p>
@@ -437,7 +442,7 @@
             <span class="notice-arrow">→</span>
           </div>
           <div class="notice-item">
-            <div class="notice-badge">📝 학술</div>
+            <div class="notice-badge"><i data-lucide="file-text"></i> 학술</div>
             <div class="notice-content">
               <h4>2024 하반기 프로젝트 발표회 결과</h4>
               <p>총 8개 팀이 발표를 진행했으며 결과 및 시상 내역을 공유합니다.</p>
@@ -460,28 +465,28 @@
           <p>2026년 1학기 신입 부원을 모집합니다.<br>코딩에 열정이 있다면 누구든 환영합니다! <br>면접 일정은 3월 18일 (화)에 예정되어 있으며 변동시 별도 연락드립니다.</p>
           <ul class="recruit-list">
             <li>
-              <span class="recruit-icon">📅</span>
+              <span class="recruit-icon"><i data-lucide="calendar"></i></span>
               <div>
                 <strong>모집 기간</strong>
                 <p>2026년 2월 5일(목) ~ 3월 17일(화)</p>
               </div>
             </li>
             <li>
-              <span class="recruit-icon">👤</span>
+              <span class="recruit-icon"><i data-lucide="user-check"></i></span>
               <div>
                 <strong>지원 자격</strong>
                 <p>컴퓨터소프트웨어공학과 재학생 (1학년 ~ 2학년)</p>
               </div>
             </li>
             <li>
-              <span class="recruit-icon">📝</span>
+              <span class="recruit-icon"><i data-lucide="list-checks"></i></span>
               <div>
                 <strong>전형 절차</strong>
                 <p>서류 접수 → 면접 (3월 18일 예정) → 최종 발표</p>
               </div>
             </li>
             <li>
-              <span class="recruit-icon">💰</span>
+              <span class="recruit-icon"><i data-lucide="credit-card"></i></span>
               <div>
                 <strong>회비</strong>
                 <p>학기당 15,000원 (동아리 운영 비용)</p>
@@ -566,19 +571,19 @@
           <h4>연락처</h4>
           <ul>
             <li>
-              <span class="contact-icon">📧</span>
-              <span>https://minseokimcode.github.io/CAN_Homepage/</span>
+              <span class="contact-icon"><i data-lucide="globe"></i></span>
+              <span>CAN 회장 김민서 - 010-2782-5123</span>
             </li>
             <li>
-              <span class="contact-icon">📍</span>
+              <span class="contact-icon"><i data-lucide="map-pin"></i></span>
               <span>동아리방 위치: 3호관 512호</span>
             </li>
             <li>
-              <span class="contact-icon">⏰</span>
+              <span class="contact-icon"><i data-lucide="clock"></i></span>
               <span>정기모임: 매주 수요일 18:00</span>
             </li>
             <li>
-              <span class="contact-icon">💬</span>
+              <span class="contact-icon"><i data-lucide="message-circle"></i></span>
               <span>카카오톡: CAN 오픈채팅방</span>
             </li>
           </ul>
@@ -596,5 +601,6 @@
 
   <script src="script.js"></script>
   <script type="module" src="firebase-form.js"></script>
+  <script>lucide.createIcons();</script>
 </body>
 </html>
