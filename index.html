@@ -100,25 +100,35 @@
           <div class="about-card">
             <div class="card-header">
               <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
-              <span class="card-title">can.py</span>
+              <span class="card-title">can.cpp</span>
             </div>
-            <pre class="code-block"><code><span class="kw">class</span> <span class="fn">CAN</span>:
-    name = <span class="str">"Computer Algorithm Network"</span>
-    founded = <span class="num">1988</span>
-    members = <span class="num">80</span>
+            <pre class="code-block"><code><span class="kw">#include</span> <span class="str">&lt;format&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;iostream&gt;</span>
+<span class="kw">#include</span> <span class="str">&lt;vector&gt;</span>
 
-    <span class="kw">def</span> <span class="fn">mission</span>(self):
-        <span class="kw">return</span> <span class="str">"함께 성장하는 개발자"</span>
+<span class="kw">struct</span> <span class="fn">CAN</span> {
+  std::string name    = <span class="str">"CAN"</span>;
+  <span class="kw">int</span>         founded = <span class="num">1988</span>;
+  <span class="kw">int</span>         members = <span class="num">80</span>;
 
-    <span class="kw">def</span> <span class="fn">values</span>(self):
-        <span class="kw">return</span> [
-            <span class="str">"학습"</span>,
-            <span class="str">"협업"</span>,
-            <span class="str">"성장"</span>,
-        ]
+  <span class="kw">auto</span> <span class="fn">mission</span>() <span class="kw">const</span>
+      -> std::string {
+    <span class="kw">return</span> <span class="str">"함께 성장하는 개발자"</span>;
+  }
 
-can = <span class="fn">CAN</span>()
-<span class="fn">print</span>(can.mission())</code></pre>
+  <span class="kw">auto</span> <span class="fn">values</span>() <span class="kw">const</span>
+      -> std::vector&lt;std::string&gt; {
+    <span class="kw">return</span> {<span class="str">"학습"</span>, <span class="str">"협업"</span>, <span class="str">"성장"</span>};
+  }
+};
+
+<span class="kw">int</span> <span class="fn">main</span>() {
+  <span class="kw">const</span> <span class="fn">CAN</span> can{};
+  std::cout &lt;&lt; std::format(
+    <span class="str">"[{}] {}\n"</span>,
+    can.name, can.<span class="fn">mission</span>()
+  );
+}</code></pre>
           </div>
         </div>
       </div>
@@ -479,7 +489,6 @@ can = <span class="fn">CAN</span>()
               </div>
             </li>
           </ul>
-          <a href="#contact" class="btn btn-white">지원서 작성하기</a>
         </div>
         <div class="recruit-form-wrap">
           <div class="recruit-form">

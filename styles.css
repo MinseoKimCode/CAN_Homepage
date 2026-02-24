@@ -53,10 +53,6 @@ img {
   --transition: 0.3s ease;
 }
 
-/* ── SCROLLBAR ── */
-::-webkit-scrollbar { width: 6px; }
-::-webkit-scrollbar-track { background: var(--bg); }
-::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
 
 /* ── COMMON ── */
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
