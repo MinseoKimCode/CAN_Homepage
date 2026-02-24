@@ -15,7 +15,13 @@ body {
 }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%; display: block;
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
 
 /* ── VARIABLES ── */
 :root {
@@ -816,7 +822,8 @@ img { max-width: 100%; display: block; }
   .code-block { font-size: 0.78rem; overflow-x: auto; padding: 20px; }
 
   /* Activities & Members */
-  .activities-grid { grid-template-columns: 1fr; }
+  .activities-grid { grid-template-columns: repeat(2, 1fr); }
+  .activity-card { padding: 24px 20px; }
   .members-grid { grid-template-columns: repeat(2, 1fr); }
 
   /* Gallery */
@@ -844,20 +851,21 @@ img { max-width: 100%; display: block; }
   /* Hero */
   .hero-content { padding: 88px 16px 48px; }
   .hero-sub { font-size: 0.98rem; }
-  .hero-stats { flex-direction: column; gap: 12px; padding: 18px 16px; }
-  .stat { flex-direction: row; align-items: center; gap: 8px; justify-content: center; }
-  .stat p { margin-top: 0; }
-  .stat-num { font-size: 1.6rem; }
+  .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 12px 8px; padding: 16px 12px; justify-content: space-around; }
+  .stat { flex: 1; min-width: 80px; flex-direction: column; align-items: center; }
+  .stat-num { font-size: 1.5rem; }
   .hero-buttons { flex-direction: column; }
   .btn { padding: 12px 20px; font-size: 0.9rem; }
 
   /* Members & Activities */
-  .members-grid { grid-template-columns: 1fr; }
-  .member-card { padding: 24px 16px; }
-  .activity-card { padding: 24px 20px; }
+  .activities-grid { grid-template-columns: repeat(2, 1fr); }
+  .activity-card { padding: 20px 16px; }
+  .activity-icon { font-size: 2rem; margin-bottom: 12px; }
+  .members-grid { grid-template-columns: repeat(2, 1fr); }
+  .member-card { padding: 20px 12px; }
 
   /* Gallery */
-  .gallery-grid { grid-template-columns: 1fr; grid-auto-rows: 180px; }
+  .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
 
   /* Notice: fully stacked */
   .notice-item { flex-direction: column; align-items: flex-start; padding: 14px 16px; gap: 8px; }

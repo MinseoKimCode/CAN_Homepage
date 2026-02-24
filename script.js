@@ -297,6 +297,16 @@ if (aboutCard) {
   });
 }
 
+/* ── IMAGE PROTECTION ── */
+document.querySelectorAll('img').forEach(img => {
+  // 우클릭 차단
+  img.addEventListener('contextmenu', e => e.preventDefault());
+  // 드래그 저장 차단
+  img.addEventListener('dragstart', e => e.preventDefault());
+  // 모바일 길게 누르기 차단
+  img.addEventListener('touchstart', e => { if (e.cancelable) e.preventDefault(); }, { passive: false });
+});
+
 /* ── REVEAL SECTIONS ── */
 const sections = document.querySelectorAll('.section');
 const sectionObserver = new IntersectionObserver(entries => {
