@@ -241,24 +241,7 @@ noticeItems.forEach(item => {
   });
 });
 
-/* ── CONTACT FORM ── */
-const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', e => {
-  e.preventDefault();
-  const name = document.getElementById('name').value.trim();
-  if (!name) return;
-
-  const btn = contactForm.querySelector('button[type="submit"]');
-  btn.textContent = '전송 중...';
-  btn.disabled = true;
-
-  setTimeout(() => {
-    contactForm.reset();
-    btn.textContent = '문의 보내기';
-    btn.disabled = false;
-    showToast(`${name}님의 문의가 접수되었습니다! 빠른 시일 내에 연락드리겠습니다. 😊`);
-  }, 1200);
-});
+/* ── CONTACT FORM: Firebase 모듈(firebase-form.js)에서 처리 ── */
 
 /* ── SMOOTH SCROLL ── */
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -1,0 +1,10 @@
+# Firebase 실제 설정 파일 (로컬 전용, 절대 커밋하지 마세요)
+firebase-config.js
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

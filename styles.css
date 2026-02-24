@@ -861,7 +861,7 @@ img {
 
   /* Recruit & Footer */
   .recruit-wrap { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+  .footer-grid { grid-template-columns: 2fr 1fr 1.5fr; gap: 24px; padding-bottom: 48px; }
   .footer-bottom { flex-direction: column; text-align: center; }
 }
 
@@ -919,9 +919,25 @@ img {
   /* Recruit & Form */
   .recruit-form { padding: 20px; }
 
-  /* Footer */
+  /* Footer: 브랜드 전체폭 + 링크/연락처 2열 */
   .footer-section { padding: 60px 0 0; }
-  .footer-grid { gap: 24px; }
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 16px;
+    padding-bottom: 36px;
+  }
+  .footer-brand {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 12px 20px;
+  }
+  .footer-brand p { margin-bottom: 0; font-size: 0.85rem; }
+  .footer-logo { margin-bottom: 8px; font-size: 1.3rem; }
+  .social-links { justify-content: flex-end; }
+  .footer-links h4, .footer-contact-info h4 { font-size: 0.88rem; margin-bottom: 14px; }
+  .footer-links a, .footer-contact-info li { font-size: 0.82rem; }
   .footer-contact-info li span:last-child { word-break: break-all; }
   .toast { bottom: 16px; right: 16px; left: 16px; max-width: none; }
 }
