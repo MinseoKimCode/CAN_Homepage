@@ -232,6 +232,39 @@ filterBtns.forEach(btn => {
   });
 });
 
+/* ── PROJECTS FILTER ── */
+const projFilterBtns = document.querySelectorAll('.proj-filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+
+projFilterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    projFilterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const filter = btn.dataset.filter;
+    projectCards.forEach(card => {
+      const cat = card.dataset.category;
+      if (filter === 'all' || cat === filter) {
+        card.classList.remove('hidden');
+        card.style.animation = 'fadeInUp 0.4s ease forwards';
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+/* ── PROJECT CARDS SCROLL ANIMATION ── */
+const projectCardEls = document.querySelectorAll('.project-card[data-aos]');
+const projCardObserver = new IntersectionObserver(entries => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 80);
+      projCardObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.1 });
+projectCardEls.forEach(card => projCardObserver.observe(card));
+
 /* ── CONTACT FORM: Firebase 모듈(firebase-form.js)에서 처리 ── */
 
 /* ── SMOOTH SCROLL ── */

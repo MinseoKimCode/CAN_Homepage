@@ -21,6 +21,7 @@
       <ul class="nav-links" id="navLinks">
         <li><a href="#about">소개</a></li>
         <li><a href="#activities">활동</a></li>
+        <li><a href="#projects">프로젝트</a></li>
         <li><a href="#members">멤버</a></li>
         <li><a href="#gallery">갤러리</a></li>
         <li><a href="#notice">공지사항</a></li>
@@ -193,6 +194,123 @@
             <li>학기별</li><li>MT</li><li>파티</li>
           </ul>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Projects</span>
+        <h2>프로젝트 이력</h2>
+        <p>CAN 부원들이 직접 기획하고 개발한 프로젝트 결과물입니다.</p>
+      </div>
+      <div class="projects-filter">
+        <button class="proj-filter-btn active" data-filter="all">전체</button>
+        <button class="proj-filter-btn" data-filter="app">앱/웹</button>
+        <button class="proj-filter-btn" data-filter="game">게임</button>
+        <button class="proj-filter-btn" data-filter="hw">하드웨어</button>
+        <button class="proj-filter-btn" data-filter="env">환경</button>
+      </div>
+      <div class="projects-grid" id="projectsGrid">
+
+        <!-- 3TIP팀 -->
+        <div class="project-card" data-category="app" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">2019</div>
+            <div class="project-badge">앱/웹</div>
+          </div>
+          <div class="project-icon"><i data-lucide="video"></i></div>
+          <h3 class="project-title">SaC</h3>
+          <p class="project-subtitle">Streaming as a CrossPlatform</p>
+          <p class="project-team"><i data-lucide="users-2"></i> 3TIP (Three Terminal Internet Protocol)</p>
+          <p class="project-desc">PC·Android·iOS를 아우르는 크로스플랫폼 실시간 CCTV 스트리밍 시스템. 실내 카메라를 통해 공간을 모니터링하고, 특이 상황 발생 시 즉시 알림을 발송하며 데이터베이스에 상황 기록을 저장합니다.</p>
+          <ul class="project-tags">
+            <li>Cross-Platform</li><li>Streaming</li><li>CCTV</li><li>Real-time</li>
+          </ul>
+        </div>
+
+        <!-- 옥타브 -->
+        <div class="project-card" data-category="app" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">2019</div>
+            <div class="project-badge">앱</div>
+          </div>
+          <div class="project-icon"><i data-lucide="music-2"></i></div>
+          <h3 class="project-title">Intro</h3>
+          <p class="project-subtitle">입문자를 위한 음악 창작 플랫폼</p>
+          <p class="project-team"><i data-lucide="users-2"></i> 옥타브</p>
+          <p class="project-desc">음악 분야의 높은 진입장벽을 낮추기 위한 DAW(Digital Audio Workstation) 기반 음악 창작 앱. 기타·피아노·드럼 등 다양한 악기를 타임라인 방식으로 편집하고 결과물을 소셜로 공유할 수 있습니다.</p>
+          <ul class="project-tags">
+            <li>DAW</li><li>Music</li><li>Social</li><li>Mobile</li>
+          </ul>
+        </div>
+
+        <!-- 안정이김 -->
+        <div class="project-card" data-category="game" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">2021</div>
+            <div class="project-badge">게임</div>
+          </div>
+          <div class="project-icon"><i data-lucide="gamepad-2"></i></div>
+          <h3 class="project-title">네트워크</h3>
+          <p class="project-subtitle">소규모 멀티플레이 교육 게임</p>
+          <p class="project-team"><i data-lucide="users-2"></i> 안정이김</p>
+          <p class="project-desc">소규모 네트워크 기반의 교육용 멀티플레이 게임. 이동 시간 제한과 퀴즈를 결합한 방식으로 체력(HP) 시스템을 적용하며, 1인칭 또는 탑다운 뷰를 지원합니다. MMR 기반 매칭 시스템을 통해 플레이어 실력별로 매칭됩니다.</p>
+          <ul class="project-tags">
+            <li>Network</li><li>Multiplayer</li><li>Education</li><li>Game</li>
+          </ul>
+        </div>
+
+        <!-- 가오리팀 -->
+        <div class="project-card" data-category="env" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">2021</div>
+            <div class="project-badge">환경</div>
+          </div>
+          <div class="project-icon"><i data-lucide="recycle"></i></div>
+          <h3 class="project-title">그리다</h3>
+          <p class="project-subtitle">이미지 기반 재활용 분류 앱</p>
+          <p class="project-team"><i data-lucide="users-2"></i> 가오리팀</p>
+          <p class="project-desc">사진 한 장으로 재활용 품목을 분류하는 이미지 인식 앱. 전 세계 재활용률 17% 수준의 문제를 해결하기 위해 RAPP(Waste and Resource Action Program) 기준을 반영한 분류 가이드를 제공합니다.</p>
+          <ul class="project-tags">
+            <li>Image Recognition</li><li>Recycling</li><li>AI</li><li>환경</li>
+          </ul>
+        </div>
+
+        <!-- 필요하조 -->
+        <div class="project-card" data-category="env" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">2021</div>
+            <div class="project-badge">환경</div>
+          </div>
+          <div class="project-icon"><i data-lucide="leaf"></i></div>
+          <h3 class="project-title">에코이스트 플러그 서비스</h3>
+          <p class="project-subtitle">친환경 제품 연결 플랫폼</p>
+          <p class="project-team"><i data-lucide="users-2"></i> 필요하조</p>
+          <p class="project-desc">코로나 이후 비대면 환경에서 쓰레기 감축 캠페인(쓰레기내 캠페인)을 SNS와 연동해 확산하는 플랫폼. 친환경 판매자와 소비자를 연결하고, 환경 인증 기업의 제품을 쉽게 찾아 구매할 수 있도록 지원합니다.</p>
+          <ul class="project-tags">
+            <li>Platform</li><li>Eco-friendly</li><li>SNS</li><li>Campaign</li>
+          </ul>
+        </div>
+
+        <!-- 노리컨트롤러 -->
+        <div class="project-card" data-category="hw" data-aos>
+          <div class="project-card-header">
+            <div class="project-year">진행중</div>
+            <div class="project-badge">하드웨어</div>
+          </div>
+          <div class="project-icon"><i data-lucide="cpu"></i></div>
+          <h3 class="project-title">OPC</h3>
+          <p class="project-subtitle">Open Source Controller</p>
+          <p class="project-team"><i data-lucide="users-2"></i> Nori Controller</p>
+          <p class="project-desc">MPU-6050 센서·적외선 카메라·버튼으로 구성된 오픈소스 게임 컨트롤러. PC/Xbox/PlayStation 등 다양한 환경에서 사용자가 원하는 대로 입력 맵핑을 커스터마이징할 수 있는 소프트웨어를 함께 제공합니다.</p>
+          <ul class="project-tags">
+            <li>Hardware</li><li>Open Source</li><li>MPU-6050</li><li>Controller</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -600,6 +718,7 @@
           <ul>
             <li><a href="#about">동아리 소개</a></li>
             <li><a href="#activities">주요 활동</a></li>
+            <li><a href="#projects">프로젝트 이력</a></li>
             <li><a href="#members">임원진</a></li>
             <li><a href="#gallery">갤러리</a></li>
             <li><a href="#notice">공지사항</a></li>
