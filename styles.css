@@ -573,7 +573,7 @@ img {
 /* Gallery images */
 .news-1   { background: url('int.jpg')   center/cover no-repeat; }
 .news-2   { background: url('sn2.jpg')   center/cover no-repeat; }
-.event-1  { background: linear-gradient(135deg, #1a2f1a 0%, #2d5a27 50%, #4caf50 100%); }
+.event-1  { background: url('ot.png')    center/cover no-repeat; }
 .event-2  { background: url('mt1.jpg')   center/cover no-repeat; }
 .study-1  { background: url('sul1.jpg')  center/cover no-repeat; }
 .study-2  { background: url('sn1.jpg')   center/cover no-repeat; }
@@ -772,6 +772,70 @@ img {
   font-size: 0.82rem; color: var(--text-muted);
   flex-wrap: wrap; gap: 8px;
 }
+
+/* =======================================
+   NOTICE MODAL
+======================================= */
+.notice-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 2000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; visibility: hidden;
+  transition: opacity 0.25s ease, visibility 0s linear 0.25s;
+}
+.notice-modal-overlay.open {
+  opacity: 1; visibility: visible;
+  transition: opacity 0.25s ease, visibility 0s linear 0s;
+}
+.notice-modal {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 36px 32px 32px;
+  width: 100%; max-width: 560px;
+  max-height: 82vh; overflow-y: auto;
+  position: relative;
+  transform: translateY(24px); opacity: 0;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+.notice-modal-overlay.open .notice-modal {
+  transform: translateY(0); opacity: 1;
+}
+.modal-close {
+  position: absolute; top: 14px; right: 14px;
+  background: none; border: none; cursor: pointer;
+  color: var(--text-muted);
+  width: 34px; height: 34px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  transition: background 0.15s, color 0.15s;
+}
+.modal-close:hover { background: rgba(255,255,255,0.08); color: #fff; }
+.modal-close svg { width: 18px; height: 18px; stroke: currentColor; fill: none; }
+.modal-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 14px;
+}
+.modal-date {
+  font-size: 0.8rem; color: var(--text-muted);
+  font-family: 'JetBrains Mono', monospace;
+}
+.modal-title {
+  font-size: 1.15rem; font-weight: 700; color: #fff;
+  margin-bottom: 20px; line-height: 1.5;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+.modal-body p {
+  font-size: 0.92rem; color: var(--text-muted);
+  line-height: 1.85; margin-bottom: 10px;
+}
+.modal-body p:last-child { margin-bottom: 0; }
+.modal-body strong { color: #e2e8f0; }
 
 /* =======================================
    TOAST

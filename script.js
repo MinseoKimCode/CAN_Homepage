@@ -232,15 +232,6 @@ filterBtns.forEach(btn => {
   });
 });
 
-/* ── NOTICE ITEMS CLICK ── */
-const noticeItems = document.querySelectorAll('.notice-item');
-noticeItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const title = item.querySelector('h4').textContent;
-    showToast(`"${title}" 상세 페이지 준비 중입니다.`);
-  });
-});
-
 /* ── CONTACT FORM: Firebase 모듈(firebase-form.js)에서 처리 ── */
 
 /* ── SMOOTH SCROLL ── */
@@ -289,6 +280,42 @@ document.querySelectorAll('img').forEach(img => {
   // 모바일 길게 누르기 차단
   img.addEventListener('touchstart', e => { if (e.cancelable) e.preventDefault(); }, { passive: false });
 });
+
+/* ── NOTICE MODAL ── */
+const noticeOverlay = document.getElementById('noticeOverlay');
+const modalBadgeEl  = document.getElementById('modalBadge');
+const modalDateEl   = document.getElementById('modalDate');
+const modalTitleEl  = document.getElementById('modalTitle');
+const modalBodyEl   = document.getElementById('modalBody');
+
+function openNoticeModal(item) {
+  const badge  = item.querySelector('.notice-badge');
+  const title  = item.querySelector('h4').textContent;
+  const date   = item.querySelector('.notice-date').textContent;
+  const detail = item.querySelector('.notice-detail');
+
+  modalBadgeEl.innerHTML  = badge.innerHTML;
+  modalBadgeEl.className  = badge.className.replace('notice-badge', 'modal-badge notice-badge');
+  modalDateEl.textContent = date;
+  modalTitleEl.textContent = title;
+  modalBodyEl.innerHTML   = detail ? detail.innerHTML : `<p>${item.querySelector('p').textContent}</p>`;
+
+  noticeOverlay.classList.add('open');
+  document.body.style.overflow = 'hidden';
+  lucide.createIcons({ nodes: [modalBadgeEl, document.getElementById('modalClose')] });
+}
+
+function closeNoticeModal() {
+  noticeOverlay.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.querySelectorAll('.notice-item').forEach(item => {
+  item.addEventListener('click', () => openNoticeModal(item));
+});
+document.getElementById('modalClose').addEventListener('click', closeNoticeModal);
+noticeOverlay.addEventListener('click', e => { if (e.target === noticeOverlay) closeNoticeModal(); });
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNoticeModal(); });
 
 /* ── REVEAL SECTIONS ── */
 const sections = document.querySelectorAll('.section');
