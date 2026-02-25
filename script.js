@@ -352,6 +352,7 @@ document.addEventListener('keydown', e => { if (e.key === 'Escape') closeNoticeM
 
 /* ── REVEAL SECTIONS ── */
 const sections = document.querySelectorAll('.section');
+const isMobile = window.innerWidth <= 768;
 const sectionObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -362,7 +363,7 @@ const sectionObserver = new IntersectionObserver(entries => {
 }, { threshold: 0.08 });
 sections.forEach(sec => {
   sec.style.opacity = '0';
-  sec.style.transform = 'translateY(24px)';
-  sec.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+  sec.style.transform = isMobile ? 'none' : 'translateY(24px)';
+  sec.style.transition = isMobile ? 'opacity 0.6s ease' : 'opacity 0.7s ease, transform 0.7s ease';
   sectionObserver.observe(sec);
 });

@@ -7,6 +7,7 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 *                      { scrollbar-width: none; -ms-overflow-style: none; }
 *::-webkit-scrollbar   { display: none; }
+[hidden]               { display: none !important; }
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -1136,8 +1137,8 @@ img {
 
   /* Recruit & Footer */
   .recruit-wrap { grid-template-columns: 1fr; gap: 40px; }
-  .footer-grid { grid-template-columns: 2fr 1fr 1.5fr; gap: 24px; padding-bottom: 48px; }
-  .footer-bottom { flex-direction: column; text-align: center; }
+  .footer-grid { grid-template-columns: 1.8fr 1fr 1.4fr; gap: 20px; padding-bottom: 40px; }
+  .footer-bottom { flex-direction: column; align-items: center; text-align: center; gap: 4px; }
 }
 
 @media (max-width: 480px) {
@@ -1197,32 +1198,58 @@ img {
   .gallery-grid { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 160px; }
 
   /* Notice: fully stacked */
-  .notice-item { flex-direction: column; align-items: flex-start; padding: 14px 16px; gap: 8px; }
+  .notice-item { flex-direction: column; align-items: stretch; padding: 14px 16px; gap: 8px; }
+  .notice-item .notice-badge { align-self: flex-start; }
+  .notice-content { width: 100%; }
   .notice-arrow { display: none; }
   .notice-badge { font-size: 0.7rem; }
 
   /* Recruit & Form */
   .recruit-form { padding: 20px; }
 
-  /* Footer: 브랜드 전체폭 + 링크/연락처 2열 */
-  .footer-section { padding: 60px 0 0; }
+  /* Footer: 단일 컬럼 스택 */
+  .footer-section { padding: 48px 0 0; }
   .footer-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 20px 16px;
-    padding-bottom: 36px;
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 28px;
   }
+
+  /* 브랜드: 세로 정렬, 소셜 왼쪽 정렬 */
   .footer-brand {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: start;
-    gap: 12px 20px;
+    grid-column: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
-  .footer-brand p { margin-bottom: 0; font-size: 0.85rem; }
-  .footer-logo { margin-bottom: 8px; font-size: 1.3rem; }
-  .social-links { justify-content: flex-end; }
-  .footer-links h4, .footer-contact-info h4 { font-size: 0.88rem; margin-bottom: 14px; }
-  .footer-links a, .footer-contact-info li { font-size: 0.82rem; }
-  .footer-contact-info li span:last-child { word-break: break-all; }
+  .footer-logo { margin-bottom: 0; font-size: 1.35rem; }
+  .footer-brand p { margin-bottom: 0; font-size: 0.84rem; }
+  .social-links { justify-content: flex-start; margin-top: 4px; }
+
+  /* 바로가기: 2열 그리드로 공간 활용 */
+  .footer-links ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 12px;
+  }
+  .footer-links h4, .footer-contact-info h4 {
+    font-size: 0.88rem;
+    margin-bottom: 14px;
+  }
+  .footer-links a { font-size: 0.83rem; }
+
+  /* 연락처: 전체 너비, 텍스트 줄바꿈 */
+  .footer-contact-info li { font-size: 0.82rem; gap: 10px; }
+  .footer-contact-info li span:last-child { word-break: break-word; line-height: 1.5; }
+
+  /* 하단: 중앙 정렬 세로 스택 */
+  .footer-bottom {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 4px;
+    padding: 20px 0;
+  }
+
   .toast { bottom: 16px; right: 16px; left: 16px; max-width: none; }
 }
